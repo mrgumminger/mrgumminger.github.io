@@ -1,0 +1,138 @@
+
+body{
+  margin:0;
+  background-color: black;
+  font-size: 22px;
+  font-family: Helvetica, sans-serif;
+  color:seashell;
+}
+
+header{
+  height: 69px;
+  width: 100%;
+  background-color: black;
+  border-bottom: 1px solid seashell;
+  position: fixed;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  opacity: 0.9;
+}
+
+a{
+  color: seashell;
+}
+
+header img{
+  height: 50px;
+  padding-left: 10px;
+}
+
+nav{
+  width: 400px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.content{
+  position: relative;
+  top: 69px;
+  left: 50px;
+  display: flex;
+  flex-flow: column;
+}
+
+.textbar{
+  width: 1200px;
+  background-color: black;
+}
+
+h2, h3, h4, h5{
+  text-align: center;
+  margin: 10px auto;
+  opacity:0.9;
+}
+
+.mission{
+  height:700px;
+  width:1200px;
+  background-image: url("../images/img-mission-background.jpg");
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.featured{
+  height: 700px;
+  width:1000px;
+  padding: 40px 100px 0px 100px;;
+  display:flex;
+  flex-direction: column;
+  align-content: space-around;
+}
+
+.featured img{
+  height: 200px;
+  width: 300px;
+}
+
+.row{
+  padding-top: 25px;
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.narrow{
+  width: 650px;
+  padding-left: 175px;
+}
+
+.locations{
+  height: 500px;
+  width: 1200px;
+  background-image: url("../images/img-locations-background.jpg");
+  display: flex;
+  flex-flow: column;  /** justify or align content?*/
+}
+
+.location-title{
+  width: 1200px;
+  padding: 50px 0px 15px 0px;
+}
+
+.location-row{
+  height: 290px;
+  width: 980px;
+  padding-left: 110px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.location-box{
+  width: 300px;
+  background-color: black;
+  display:flex;
+  flex-flow: column;
+  align-content: space-around;
+
+}
+.location-box h3, .location-box h4{
+  margin:auto;
+  opacity: 1;
+}
+
+footer{
+  margin-top: 10px;
+}
+
+.copyright{
+  margin-top: 50px;
+  left:20px;
+  text-align: left;
+}
+
+.contact{
+  margin: 40px 0px 20px 0px;
+}
