@@ -36,9 +36,9 @@ nav{
 }
 
 .content{
-  position: relative;
+  position:relative;
   top: 69px;
-  left: 50px;
+  margin-left: 50px;
   display: flex;
   flex-flow: column;
 }
@@ -64,12 +64,12 @@ h2, h3, h4, h5{
 }
 
 .featured{
-  height: 700px;
+  height: 650px;
   width:1000px;
-  padding: 40px 100px 0px 100px;;
+  padding: 80px 100px 10px 100px;
   display:flex;
   flex-direction: column;
-  align-content: space-around;
+  justify-content: space-between;
 }
 
 .featured img{
@@ -92,9 +92,10 @@ h2, h3, h4, h5{
 .locations{
   height: 500px;
   width: 1200px;
+  margin-top:50px;
   background-image: url("../images/img-locations-background.jpg");
   display: flex;
-  flex-flow: column;  /** justify or align content?*/
+  flex-flow: column;
 }
 
 .location-title{
@@ -124,15 +125,18 @@ h2, h3, h4, h5{
 }
 
 footer{
-  margin-top: 10px;
+  position:relative;
+  top: 69px;
 }
-
 .copyright{
-  margin-top: 50px;
-  left:20px;
+  margin-left: 20px;
   text-align: left;
 }
 
 .contact{
-  margin: 40px 0px 20px 0px;
+  height: 200px;
+  margin-left: 50px;
+  display:flex;
+  flex-flow: column;
+  justify-content: space-around;
 }
