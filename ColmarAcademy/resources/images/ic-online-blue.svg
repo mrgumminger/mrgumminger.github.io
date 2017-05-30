@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="28" version="1.1"><rect id="backgroundrect" width="100%" height="100%" x="0" y="0" fill="none" stroke="none"/>
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>ic_online</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"/>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.05 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"/>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+    </defs>
+    
+<g class="currentLayer"><title>Layer 1</title><g id="OPt-2" stroke="none" stroke-width="1" fill="#5573b2" fill-rule="evenodd" class="selected" fill-opacity="1">
+        <g id="prog2_pro3_Mobile-Portrait_opt2-Copy-2" fill="#5573b2">
+            <g id="nav" fill="#5573b2">
+                <g id="Group-6" filter="url(#filter-1)" fill="#5573b2">
+                    <g id="ic_online" fill="#5573b2">
+                        <path d="M24,14 L6,14 L6,4 L24,4 L24,14 zM24,2 L6,2 C4.889999999999986,2 4,2.8900000000000006 4,4 L4,16 C4,17.1045695 4.895430500000003,18 6,18 L13,18 L11,21 L11,22 L19,22 L19,21 L17,18 L24,18 C25.104569499999997,18 26,17.1045695 26,16 L26,4 C26,2.8900000000000006 25.099999999999994,2 24,2 z" id="Shape" fill="#5573b2"/>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g></g></svg>

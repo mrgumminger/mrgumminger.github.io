@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="27" height="27" version="1.1"><rect id="backgroundrect" width="100%" height="100%" x="0" y="0" fill="none" stroke="none"/>
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>ic_onCampus</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"/>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.05 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"/>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+    </defs>
+    
+<g class="currentLayer"><title>Layer 1</title><g id="OPt-2" stroke="none" stroke-width="1" fill="#5573b2" fill-rule="evenodd" class="selected" fill-opacity="1">
+        <g id="prog2_pro3_Mobile-Portrait_opt2-Copy-2" fill="#5573b2">
+            <g id="nav" fill="#5573b2">
+                <g id="Group-6" filter="url(#filter-1)" fill="#5573b2">
+                    <g id="ic_onCampus" fill="#5573b2">
+                        <path d="M23,4 L23,6 L18,6 L14.530000000000001,11 L17,11 L17,13 L15.460000000000008,13 L19.17,21 L16.97,21 L16.039999999999992,19 L7.3799999999999955,19 L6.349999999999994,21 L4.099999999999994,21 L8.230000000000004,13 L8,13 C7.549999999999997,13 7.170000000000002,12.7 7.040000000000006,12.3 L3.8700000000000045,2.84 L4.819999999999993,2.5 C5.340000000000003,2.34 5.909999999999997,2.629999999999999 6.079999999999998,3.1499999999999986 L8.719999999999999,11 L13.099999999999994,11 L16.569999999999993,6 L13,6 L13,4 L23,4 L23,4 zM10.5,13 L8.420000000000002,17 L15.11,17 L13.260000000000005,13 L10.5,13 z" id="Shape" fill="#5573b2"/>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g></g></svg>
