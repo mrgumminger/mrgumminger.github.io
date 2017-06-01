@@ -1,10 +1,55 @@
+/******************************************************************/
+/* default font and colors                                        */
+/******************************************************************/
 html{
+  background-color: #C0C0C0;
+
+}
+
+main{
   font-family: "Lato", sans-serif;
   font-size: 16px;
   background-color: #5573B2;
   color:#C0C0C0;
 }
+/******************************************************************/
+/* General heading and link styling                               */
+/******************************************************************/
+a{
+  font-family: "Lato", sans-serif;
+  text-decoration: none;
+  color: #C0C0C0;
+  padding-left: 16px;
+}
+h1{
+  font-size: 2rem;
+  font-weight: 900;
+  line-height: 1.1;
+}
+h2{
+  font-size:2rem;
+  font-weight: bold;
+  padding: 32px 0;
+}
+h3{
+  font-size: 1.3rem;
+  line-height: 1.2;
+}
+h5, footer a{
+  font-size: 0.8rem;
+  color:#374A72;
+}
+p{
+  font-family: "Palanquin", sans-serif;
+  font-size: .9rem;
+  line-height: 1.25;
+  padding: 8px 8px 8px 0;
+}
 
+/******************************************************************/
+/* Title bar (header) contains the school logo and stylized name  */
+/* as well as links to other important sections of the page       */
+/******************************************************************/
 header{
   background-color: #45434C;
   height: 64px;
@@ -13,17 +58,35 @@ header{
   justify-content: space-between;
 }
 
+/*school logo icon*/
 header img{
   height:48px;
   padding: 0 2% 0 24px;
 }
+
+/* logo icon plus stylized name */
 .logo{
   display:flex;
   justify-content: space-between;
   align-items: center;
 }
-/* Navigation items pc-nav is active for larger screens
-   mobile-nav is active for smaller screens */
+
+/* following two items create the stylized school name in the logo */
+.title-bar{
+  font-family: "Biryani", sans-serif;
+  font-weight: 800;
+  color:#5573B2;
+}
+.thin{
+  font-weight: 200;
+  color:#C0C0C0;
+}
+
+/******************************************************************/
+/* Navigation items:                                              */
+/*   pc-nav (text-based) is active for larger screens             */
+/*   mobile-nav (icno-based) is active for smaller screens        */
+/******************************************************************/
 nav{
   padding-right:3%;
   align-self: center;
@@ -31,24 +94,13 @@ nav{
 .pc-nav{
   display: inline-block;
 }
-.mobile-nav{
+.mobile-nav, .test{
   display:none;
 }
-a{
-  text-decoration: none;
-  color: #C0C0C0;
-  padding-left: 16px;
-}
-.title-bar{
-  font-family: "Biryani", sans-serif;
-  font-weight: 900;
-  color:#5573B2;
-}
-.thin{
-  font-weight: 100;
-  color:#C0C0C0;
-}
-/*container and content for main focus box */
+
+/******************************************************************/
+/* Container and content for main splash screen                   */
+/******************************************************************/
 .landing-box{
   background-color: #5573B2;
 }
@@ -67,47 +119,46 @@ a{
   vertical-align: middle;
 }
 
-.landing-box .side-text{
-    width:25%;
-}
-/* "start here" button */
-.start{
-  width: 100%;
-  background-color: #45434C;
-  /*color:#B29655;*/
-  color:#BF7B6E;
-  font-size: 1.2rem;
-  padding: 8px 0;
-  text-align: center;
-}
-
-h1{
-  font-size: 2rem;
-  font-weight: 900;
-  line-height: 1.1;
-}
-h3{
-  font-size: 1.3rem;
-  line-height: 1.2;
-}
-
 .landing-box h3{
     margin: 24px auto;
 }
-.main-pic-box h2{
-  padding: 0 0 24px 0;
+
+.landing-box .side-text{
+    width:25%;
+    box-sizing: border-box;
 }
+
 .landing-box p, .main-pic-box p{
     margin-bottom: 24px;
 }
-p{
-  font-family: "Palanquin", sans-serif;
-  font-size: .9rem;
-  line-height: 1.25;
+
+/******************************************************************/
+/* The following 2 items control the "start here" button, text    */
+/* and background color swap when hovering to highlight the       */
+/* button more                                                    */
+/******************************************************************/
+.start{
+  width: 100%;
+  background-color: #45434C;
+  color:#B27A3C;
+  font-size: 1.2rem;
   padding: 8px 0;
+  text-align: center;
+  transition:color 400ms, background-color 400ms;
 }
-/* highlights section contains large image and several smaller boxes
-   with images and links */
+
+.start:hover{
+  background-color: #B27A3C;
+  color:#45434C;
+}
+
+
+/******************************************************************/
+/* information and thesis sections share a structure and some     */
+/* styling details. Shared information and shared contianer       */
+/* details for those two sections are below                       */
+/******************************************************************/
+/* shared styling */
 .information, .thesis{
   background-color: #C0C0C0;
   color:#374A72;
@@ -118,62 +169,75 @@ p{
   background-color: #374A72;
   color:#C0C0C0;
 }
+
+/* shared container information follows. First is the large picture/video */
+.multi-container{
+  width:100%;
+  display: flex;
+  flex-wrap: nowrap;
+}
 .main-pic-box{
   width:60%;
   padding: 32px 24px;
-  display:inline-block;
 }
-.thesis .main-pic-box {
-  padding: 16px 16px 24px 24px;
-}
-.main-pic-box img, .main-pic-box video{
+
+.main-pic-box img, video{
   width:100%;
   margin-bottom: 32px;
 }
 
-.courses{
-  background-color: ##5573B2;
-}
-h2{
-  font-size:2rem;
-  font-weight: bold;
-  padding: 32px 0;
+.main-pic-box h2{
+  padding: 0 0 24px 0;
 }
 
-h5, footer a{
-  font-size: 0.8rem;
-  color:#374A72;
+#mobile-pic{
+  display:none;
 }
+/* Shared container information for the smaller vertically stacked
+   information blocks */
 .stacked-content-box{
-  display: inline-flex;
+  display:flex;
   flex-flow: column;
   vertical-align: top;
   margin-top: 16px;
   width:35%;
 }
+
 .content-box img{
   width:35%;
   margin:3.5%;
   vertical-align: middle;
   display: inline-block;
 }
+
 .content-box .side-text{
-    width:56%;
+  width:56%;
 }
+
 .content-box a{
-  color: #BF7C6E;
+  color:#B27A3C;
   padding:0;
 }
 
-.courses h2, .thesis h2{
-  text-align: center;
+/* Unique styleing for the thesis main picuter (slightly smaller) */
+/* NOTE: Thesis h2 styling appears in courses section below       */
+.thesis .main-pic-box {
+  padding: 16px 16px 24px 24px;
 }
+
+
+/******************************************************************/
+/* The course offering container and individual course            */
+/* description boxes are styled below.                            */
+/******************************************************************/
 .courses{
+  background-color: ##5573B2;
   display: flex;
   justify-content: center;
   flex-flow: column;
   align-items: center;
 }
+
 .course-container{
   width:90%;
   display:flex;
@@ -181,12 +245,18 @@ h5, footer a{
   flex-wrap: wrap;
   margin-bottom: 32px;
 }
+
 .course-box{
   width:30%;
   height:296px;
   margin: 0 8px 16px 8px;
   background-color: #45434C;
 }
+
+.courses h2, .thesis h2{
+  text-align: center;
+}
+
 .course-box img{
   width:100%;
 }
@@ -194,6 +264,10 @@ h5, footer a{
 .course-text{
   padding:16px 0 0 16px;
 }
+
+/******************************************************************/
+/* Footer styling                                                 */
+/******************************************************************/
 footer{
   background-color: #C0C0C0;
   border-top: 1px solid darkgray;
@@ -201,31 +275,123 @@ footer{
   display: flex;
   justify-content: space-between;
 }
+
 footer h5{
+  font-family: "Lato", sans-serif;
   display:inline-block;
   padding: 16px 24px;
   margin-bottom: 24px;
 }
+
 footer nav{
   align-self: auto;
   padding-top: 16px;
 }
 
+/* Terms and Privacy Notices Animations NOTE: not working*/
+.legal-container{
+  position: fixed;
+  z-index: 10;
+  top: -100%;
+  left: 0;
+  width: 30%;
+  padding: 0.5rem 4rem 2rem 4rem;
+  background-color: #ffffff;
+  opacity: 0;
+  font-size: 1.5rem;
+  transition:top 1s ease-out, opacity 1s ease-out;
+}
+.legal-container:hover{
+  top: 0;
+  opacity: 1;
+}
 /* mobile device settings */
 @media only screen and (max-width:600px) {
 
-  footer nav, .pc-nav, .logo{
+  footer nav, .pc-nav, .logo, .landing-box img, .information .main-pic-box,
+  .thesis .stacked-content-box, .thesis p, .thesis h3, .course-box img,
+  .course-box p{
     display:none;
   }
 
+  header{
+    background-color: #C0C0C0;
+
+  }
+.landing-box .side-text{
+  width:100%;
+  padding: 32px 16px;
+}
+
+.stacked-content-box, .content-box .side-text{
+  width:100%;
+}
+.start{
+  width:80%;
+  align-self: center;
+}
+
+.content-box{
+  display:flex;
+  flex-flow: column;
+}
+
+.content-box img{
+  width:100%;
+  margin:auto;
+}
+
+.content-box .side-text{
+  box-sizing: border-box;
+  padding-left: 32px;
+}
+.information .content-box:last-child{
+  background-color: #C0C0C0;
+  color:#374A72;
+  margin-bottom: 32px;
+}
+#pc-pic {
+  display:none;
+}
+#mobile-pic{
+  display:block;
+  box-sizing: border-box;
+  padding: 16px 16px 24px 16px;
+}
   .mobile-nav{
     display:flex;
     justify-content: space-around;
     width:100%;
   }
 
+  .thesis .main-pic-box{
+    width:100%;
+    padding: 0 0 32px 0;
+  }
+.course-container{
+  flex-flow: column;
+}
+
+.course-box{
+  width:100%;
+  height:auto;
+  padding:0;
+  margin:0 0 8px 0;
+}
+.course-text{
+  padding:16px;
+}
   h5{
     margin:24px 0 0 0;
   }
 
+video{
+  margin:auto;
+}
+.test{
+  display:block;
+  background-color: #374A72;
+  width:100%;
+  height:180px;
+}
 }
