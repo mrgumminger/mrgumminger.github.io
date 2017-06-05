@@ -1,5 +1,7 @@
 /******************************************************************/
 /* default font and colors                                        */
+/* Colors were chosen as Blue and Silver seemed like possible     */
+/* color choices                                                  */
 /******************************************************************/
 html{
   background-color: #C0C0C0;
@@ -15,7 +17,7 @@ main{
 /******************************************************************/
 /* General heading and link styling                               */
 /******************************************************************/
-a{
+a, span{
   font-family: "Lato", sans-serif;
   text-decoration: none;
   color: #C0C0C0;
@@ -35,7 +37,7 @@ h3{
   font-size: 1.3rem;
   line-height: 1.2;
 }
-h5, footer a{
+h5, footer span{
   font-size: 0.8rem;
   color:#374A72;
 }
@@ -77,6 +79,11 @@ header img{
   font-weight: 800;
   color:#5573B2;
 }
+
+.title-bar span{
+  padding:0;
+}
+
 .thin{
   font-weight: 200;
   color:#C0C0C0;
@@ -90,11 +97,12 @@ header img{
 nav{
   padding-right:3%;
   align-self: center;
+  display:flex;
 }
 .pc-nav{
   display: inline-block;
 }
-.mobile-nav, .test{
+.mobile-nav, .mobile-crest{
   display:none;
 }
 
@@ -105,13 +113,8 @@ nav{
   background-color: #5573B2;
 }
 
-.landing-box img{
-  display:inline-block;
-  vertical-align: middle;
-  width: 60%;
-  margin: 32px 40px 32px 24px;
-}
-
+/* generic container for text to the right of other content, also used */
+/* by other content boxes below*/
 .side-text{
   display: inline-flex;
   flex-flow: column;
@@ -119,12 +122,20 @@ nav{
   vertical-align: middle;
 }
 
+.landing-box img{
+  display:inline-block;
+  vertical-align: middle;
+  width: 60%;
+  margin: 32px 40px 32px 24px;
+  flex-shrink: 0;
+}
+
 .landing-box h3{
-    margin: 24px auto;
+    margin: 24px 0;
 }
 
 .landing-box .side-text{
-    width:25%;
+    width:30%;
     box-sizing: border-box;
 }
 
@@ -176,6 +187,7 @@ nav{
   display: flex;
   flex-wrap: nowrap;
 }
+
 .main-pic-box{
   width:60%;
   padding: 32px 24px;
@@ -219,7 +231,7 @@ nav{
   padding:0;
 }
 
-/* Unique styleing for the thesis main picuter (slightly smaller) */
+/* Unique styling for the thesis main picture (slightly smaller) */
 /* NOTE: Thesis h2 styling appears in courses section below       */
 .thesis .main-pic-box {
   padding: 16px 16px 24px 24px;
@@ -288,47 +300,122 @@ footer nav{
   padding-top: 16px;
 }
 
-/* Terms and Privacy Notices Animations NOTE: not working*/
+/******************************************************************/
+/* Terms and Privacy Notices Animations.                          */
+/******************************************************************/
 .legal-container{
   position: fixed;
   z-index: 10;
-  top: -100%;
-  left: 0;
+  bottom: -100%;
+  right: 0;
   width: 30%;
-  padding: 0.5rem 4rem 2rem 4rem;
-  background-color: #ffffff;
+  padding: 1rem;
+  background-color: #374A72;
+  color:#C0C0C0;
   opacity: 0;
   font-size: 1.5rem;
-  transition:top 1s ease-out, opacity 1s ease-out;
+  transition:bottom 1s ease-out, opacity 1s ease-out;
 }
-.legal-container:hover{
-  top: 0;
+.legal:hover .legal-container{
+  bottom: 0;
   opacity: 1;
 }
-/* mobile device settings */
-@media only screen and (max-width:600px) {
 
-  footer nav, .pc-nav, .logo, .landing-box img, .information .main-pic-box,
-  .thesis .stacked-content-box, .thesis p, .thesis h3, .course-box img,
-  .course-box p{
-    display:none;
+/******************************************************************/
+/* tablet device settings. NOTE: not called out in the spec, but  */
+/* between full screen and mobile size, several very poor visual  */
+/* artifacts show up - wrapping links in the menu line, and       */
+/* crowding of other content boxes. This middle sizing elminates  */
+/* the ugly artifacts with minimal change to full size operation. */
+/******************************************************************/
+@media only screen and (max-width:825px){
+
+  .landing-box img, .main-pic-box{
+    width:40%;
+  }
+  .landing-box .side-text, .stacked-content-box{
+    width: 45%;
+  }
+  .course-box{
+    width:45%;
   }
 
-  header{
-    background-color: #C0C0C0;
-
-  }
-.landing-box .side-text{
-  width:100%;
-  padding: 32px 16px;
 }
 
-.stacked-content-box, .content-box .side-text{
+/******************************************************************/
+/* mobile device settings                                         */
+/******************************************************************/
+@media only screen and (max-width:625px) {
+
+/* items to turn off from the PC version of the page */
+footer nav, .pc-nav, .logo, .landing-box img, .information .main-pic-box,
+.thesis .stacked-content-box, .thesis p, .thesis h3, .course-box img,
+.course-box p, #pc-pic{
+  display:none;
+}
+/******************************************************************/
+/* changes to the header (menu bar becomes icon based)            */
+/******************************************************************/
+header{
+  background-color: #C0C0C0;
+}
+
+.mobile-nav{
+  display:flex;
+  justify-content: space-around;
   width:100%;
 }
+
+
+/******************************************************************/
+/* changes to the main splash screen/landing area                 */
+/* NOTE: The first three items here create a new content block    */
+/* not called out in the spec. However, the spec simply placed a  */
+/* large empty area that left a good part of the landing screen   */
+/* empty.  I did not find this appealing and added something      */
+/* that seemed appropriate to the site and more visually          */
+/* interesting.                                                   */
+/******************************************************************/
+.mobile-crest{
+  display:flex;
+  justify-content: center;
+  background-color: #374A72;
+  width:100%;
+  height:180px;
+  align-items: center;
+}
+
+.mobile-crest img{
+  height:160px;
+  padding:0 24px;
+}
+
+.mobile-crest h3{
+  font-family: "Graduate";
+  writing-mode:vertical-rl;
+  text-orientation: upright;
+}
+
+/* start button wider and centered */
 .start{
   width:80%;
   align-self: center;
+}
+
+/* text with start button remains, but pic is removed */
+.landing-box .side-text{
+  width:100%;
+  padding: 32px 16px;
+  margin:auto;
+}
+
+/******************************************************************/
+/* changes to the information section. Large picture is removed,  */
+/* information boxes use different sized pictures which are now   */
+/* full width. Associated text and links are under the picture.   */
+/******************************************************************/
+.stacked-content-box, .content-box .side-text{
+  width:100%;
 }
 
 .content-box{
@@ -336,6 +423,11 @@ footer nav{
   flex-flow: column;
 }
 
+#mobile-pic{
+  display:block;
+  box-sizing: border-box;
+  padding: 16px 16px 24px 16px;
+}
 .content-box img{
   width:100%;
   margin:auto;
@@ -345,29 +437,20 @@ footer nav{
   box-sizing: border-box;
   padding-left: 32px;
 }
+
 .information .content-box:last-child{
   background-color: #C0C0C0;
   color:#374A72;
   margin-bottom: 32px;
 }
-#pc-pic {
-  display:none;
-}
-#mobile-pic{
-  display:block;
-  box-sizing: border-box;
-  padding: 16px 16px 24px 16px;
-}
-  .mobile-nav{
-    display:flex;
-    justify-content: space-around;
-    width:100%;
-  }
 
-  .thesis .main-pic-box{
-    width:100%;
-    padding: 0 0 32px 0;
-  }
+
+/******************************************************************/
+/* changes to courses section. Pictures and text removed and      */
+/* replace by full width links to take user to appropriate        */
+/* course detail page.                                            */
+/******************************************************************/
+
 .course-container{
   flex-flow: column;
 }
@@ -378,20 +461,29 @@ footer nav{
   padding:0;
   margin:0 0 8px 0;
 }
+
 .course-text{
   padding:16px;
 }
-  h5{
-    margin:24px 0 0 0;
-  }
+
+/******************************************************************/
+/* changes to thesis section. Detail boxes are removed. Only      */
+/* video remains, now full width                                  */
+/******************************************************************/
+.thesis .main-pic-box{
+  width:100%;
+  padding: 0 0 32px 0;
+}
 
 video{
   margin:auto;
 }
-.test{
-  display:block;
-  background-color: #374A72;
-  width:100%;
-  height:180px;
+
+/******************************************************************/
+/* footer changes                                                 */
+/******************************************************************/
+h5{
+  margin:24px 0 0 0;
 }
+
 }

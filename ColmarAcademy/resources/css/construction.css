@@ -1,0 +1,22 @@
+html{
+  background-color: black;
+  color:#F7D060;
+}
+
+img{
+  width: 50%;
+  align-self: center;
+  padding: 20px 0;
+}
+
+body{
+  display: flex;
+  flex-flow: column;
+  box-sizing: border-box;
+  width:100%;
+
+}
+h1{
+  text-align: center;
+    margin:5%;
+}
