@@ -5,7 +5,6 @@
 /******************************************************************/
 html{
   background-color: #C0C0C0;
-
 }
 
 main{
@@ -16,6 +15,7 @@ main{
   position:relative;    /* handle fixed menu bar */
   top:64px;
 }
+
 /******************************************************************/
 /* General heading and link styling                               */
 /******************************************************************/
@@ -25,24 +25,29 @@ a, span{
   color: #C0C0C0;
   padding-left: 16px;
 }
+
 h1{
   font-size: 2rem;
   font-weight: 900;
   line-height: 1.1;
 }
+
 h2{
   font-size:2rem;
   font-weight: bold;
   padding: 32px 0;
 }
+
 h3{
   font-size: 1.3rem;
   line-height: 1.2;
 }
+
 h5, footer span{
   font-size: 0.8rem;
   color:#374A72;
 }
+
 p{
   font-family: "Palanquin", sans-serif;
   font-size: .9rem;
@@ -104,9 +109,11 @@ nav{
   align-self: center;
   display:flex;
 }
+
 .pc-nav{
   display: inline-block;
 }
+
 .mobile-nav, .mobile-crest{
   display:none;
 }
@@ -167,7 +174,6 @@ nav{
   background-color: #B27A3C;
   color:#45434C;
 }
-
 
 /******************************************************************/
 /* information and thesis sections share a structure and some     */
@@ -282,6 +288,10 @@ nav{
   padding:16px 0 0 16px;
 }
 
+.course-box a{
+  display:none;
+}
+
 /******************************************************************/
 /* Footer styling                                                 */
 /******************************************************************/
@@ -323,6 +333,7 @@ footer nav{
   font-size: 1.5rem;
   transition:bottom 1s ease-out, opacity 1s ease-out;
 }
+
 .legal:hover .legal-container{
   bottom: 0;
   opacity: 1;
@@ -360,6 +371,7 @@ footer nav, .pc-nav, .logo, .landing-box img, .information .main-pic-box,
 .course-box p, #pc-pic{
   display:none;
 }
+
 /******************************************************************/
 /* changes to the header (menu bar becomes icon based)            */
 /******************************************************************/
@@ -370,7 +382,6 @@ footer nav, .pc-nav, .logo, .landing-box img, .information .main-pic-box,
   width:100%;
 }
 
-
 /******************************************************************/
 /* changes to the main splash screen/landing area                 */
 /* NOTE: The first three items here create a new content block    */
@@ -380,6 +391,7 @@ footer nav, .pc-nav, .logo, .landing-box img, .information .main-pic-box,
 /* that seemed appropriate to the site and more visually          */
 /* interesting.                                                   */
 /******************************************************************/
+
 .mobile-crest{
   display:flex;
   justify-content: center;
@@ -432,6 +444,7 @@ footer nav, .pc-nav, .logo, .landing-box img, .information .main-pic-box,
   box-sizing: border-box;
   padding: 16px 16px 24px 16px;
 }
+
 .content-box img{
   width:100%;
   margin:auto;
@@ -447,7 +460,6 @@ footer nav, .pc-nav, .logo, .landing-box img, .information .main-pic-box,
   color:#374A72;
   margin-bottom: 32px;
 }
-
 
 /******************************************************************/
 /* changes to courses section. Pictures and text removed and      */
@@ -468,6 +480,17 @@ footer nav, .pc-nav, .logo, .landing-box img, .information .main-pic-box,
 
 .course-text{
   padding:16px;
+}
+
+.course-box h3{
+  display:none;
+}
+
+.course-box a{
+  display:block;
+  font-size: 1.3rem;
+  line-height: 1.2;
+  padding:0;
 }
 
 /******************************************************************/
