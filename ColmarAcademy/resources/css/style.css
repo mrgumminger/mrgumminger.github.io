@@ -13,6 +13,8 @@ main{
   font-size: 16px;
   background-color: #5573B2;
   color:#C0C0C0;
+  position:relative;    /* handle fixed menu bar */
+  top:64px;
 }
 /******************************************************************/
 /* General heading and link styling                               */
@@ -56,8 +58,11 @@ header{
   background-color: #45434C;
   height: 64px;
   width: 100%;
+  border-bottom: solid 1px black;
   display: flex;
   justify-content: space-between;
+  position: fixed;
+  z-index: 10;
 }
 
 /*school logo icon*/
@@ -286,6 +291,8 @@ footer{
   margin: auto 1%;
   display: flex;
   justify-content: space-between;
+  position:relative;    /* handle fixed menu bar */
+  top:64px;
 }
 
 footer h5{
@@ -356,9 +363,6 @@ footer nav, .pc-nav, .logo, .landing-box img, .information .main-pic-box,
 /******************************************************************/
 /* changes to the header (menu bar becomes icon based)            */
 /******************************************************************/
-header{
-  background-color: #C0C0C0;
-}
 
 .mobile-nav{
   display:flex;
