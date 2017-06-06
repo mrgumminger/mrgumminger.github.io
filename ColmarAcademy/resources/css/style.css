@@ -7,20 +7,23 @@ html{
   background-color: #C0C0C0;
 }
 
-main{
+body{
   font-family: "Lato", sans-serif;
   font-size: 16px;
-  background-color: #5573B2;
   color:#C0C0C0;
-  position:relative;    /* handle fixed menu bar */
+}
+
+main{
+  background-color: #5573B2;
+  position:relative;    /* position under fixed menu bar */
   top:64px;
+  width:100%;
 }
 
 /******************************************************************/
 /* General heading and link styling                               */
 /******************************************************************/
-a, span{
-  font-family: "Lato", sans-serif;
+a{
   text-decoration: none;
   color: #C0C0C0;
   padding-left: 16px;
@@ -73,7 +76,7 @@ header{
 /*school logo icon*/
 header img{
   height:48px;
-  padding: 0 2% 0 24px;
+  padding-left: 24px;
 }
 
 /* logo icon plus stylized name */
@@ -88,10 +91,6 @@ header img{
   font-family: "Biryani", sans-serif;
   font-weight: 800;
   color:#5573B2;
-}
-
-.title-bar span{
-  padding:0;
 }
 
 .thin{
@@ -110,10 +109,6 @@ nav{
   display:flex;
 }
 
-.pc-nav{
-  display: inline-block;
-}
-
 .mobile-nav, .mobile-crest{
   display:none;
 }
@@ -130,8 +125,8 @@ nav{
 .side-text{
   display: inline-flex;
   flex-flow: column;
-  justify-content: space-between;
   vertical-align: middle;
+  width:30%;
 }
 
 .landing-box img{
@@ -139,16 +134,10 @@ nav{
   vertical-align: middle;
   width: 60%;
   margin: 32px 40px 32px 24px;
-  flex-shrink: 0;
 }
 
 .landing-box h3{
     margin: 24px 0;
-}
-
-.landing-box .side-text{
-    width:30%;
-    box-sizing: border-box;
 }
 
 .landing-box p, .main-pic-box p{
@@ -239,7 +228,7 @@ nav{
 
 .content-box a{
   color:#B27A3C;
-  padding:0;
+  padding-left:0;
 }
 
 /* Unique styling for the thesis main picture (slightly smaller) */
@@ -288,6 +277,7 @@ nav{
   padding:16px 0 0 16px;
 }
 
+/* links in the course boxes are only active in the mobile display */
 .course-box a{
   display:none;
 }
@@ -301,13 +291,11 @@ footer{
   margin: auto 1%;
   display: flex;
   justify-content: space-between;
-  position:relative;    /* handle fixed menu bar */
+  position:relative;    /* relative to fixed menu bar */
   top:64px;
 }
 
 footer h5{
-  font-family: "Lato", sans-serif;
-  display:inline-block;
   padding: 16px 24px;
   margin-bottom: 24px;
 }
@@ -317,6 +305,9 @@ footer nav{
   padding-top: 16px;
 }
 
+footer span{
+  padding-left: 16px;
+}
 /******************************************************************/
 /* Terms and Privacy Notices Animations.                          */
 /******************************************************************/
@@ -349,12 +340,12 @@ footer nav{
 @media only screen and (max-width:825px){
 
   .landing-box img, .main-pic-box{
-    width:40%;
+    width:45%;
   }
-  .landing-box .side-text, .stacked-content-box{
-    width: 45%;
+  .landing-box .side-text{
+    width: 40%;
   }
-  .course-box{
+  .course-box, .stacked-content-box{
     width:45%;
   }
 
@@ -393,11 +384,11 @@ footer nav, .pc-nav, .logo, .landing-box img, .information .main-pic-box,
 /******************************************************************/
 
 .mobile-crest{
+  width:100%;
+  height:180px;
   display:flex;
   justify-content: center;
   background-color: #374A72;
-  width:100%;
-  height:180px;
   align-items: center;
 }
 
@@ -423,6 +414,7 @@ footer nav, .pc-nav, .logo, .landing-box img, .information .main-pic-box,
   width:100%;
   padding: 32px 16px;
   margin:auto;
+  box-sizing: border-box;
 }
 
 /******************************************************************/
