@@ -176,7 +176,7 @@ nav{
   width:100%;
 }
 
-.information .content-box:last-child, .thesis .content-box:first-child{
+.information .content-box:hover, .thesis .content-box:hover{
   background-color: #374A72;
   color:#C0C0C0;
 }
@@ -260,7 +260,7 @@ nav{
 
 .course-box{
   width:30%;
-  height:296px;
+  min-height:296px;
   margin: 0 8px 16px 8px;
   background-color: #45434C;
 }
@@ -429,6 +429,7 @@ footer nav, .pc-nav, .logo, .landing-box img, .information .main-pic-box,
 .content-box{
   display:flex;
   flex-flow: column;
+  padding-bottom: 16px;
 }
 
 #mobile-pic{
@@ -447,11 +448,6 @@ footer nav, .pc-nav, .logo, .landing-box img, .information .main-pic-box,
   padding-left: 32px;
 }
 
-.information .content-box:last-child{
-  background-color: #C0C0C0;
-  color:#374A72;
-  margin-bottom: 32px;
-}
 
 /******************************************************************/
 /* changes to courses section. Pictures and text removed and      */
@@ -465,7 +461,7 @@ footer nav, .pc-nav, .logo, .landing-box img, .information .main-pic-box,
 
 .course-box{
   width:100%;
-  height:auto;
+  min-height:auto;
   padding:0;
   margin:0 0 8px 0;
 }
